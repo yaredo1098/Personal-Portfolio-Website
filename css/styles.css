@@ -32,11 +32,26 @@ section{
     padding: 20px;
 }
 
+#about{
+    text-align: center;
+}
+
 
 #about img{
     width: 200px;
+    height: 200px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    transition: 0.3s;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+#about img:hover{
+    transform: scale(1.05);
+}
+
 
 .project{
     border: 1px solid #ddd;
@@ -76,4 +91,18 @@ footer{
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+    }
+    
+    section{
+        padding: 20px;
+    }
+
+    #about img{
+        width: 120px;
+    }
 }
