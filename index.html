@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css"> 
-    <link rel="stylesheet"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yared Portfolio</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <h1>Yared Portfolio</h1>
 
-        <button id="theme-toggle">
-            Dark Mode
-        </button>
+<header>
+    <h1>Yared Portfolio</h1>
 
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <button id="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+    </button>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    </header>
+<section id="hero">
+    <div class="hero-content">
+        <h2>Hello, I'm Yared</h2>
+        <p id="typing-text"></p>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Hello I'm Yared</h2>
-
-
-            <p>
-                Computing Student | Web Development Learner |
-                High Performance Computing Enthusiast
-            </p>
-
-            <a href="#about" class="hero-btn">
-                Learn more about me
-
-            </a>
-
-        </div>
-    </section>
+        <a href="#about" class="hero-btn">
+            Learn More
+        </a>
+    </div>
+</section>
 
 <section id="about">
     <h2>About Me</h2>
 
-    <img src="images/profile.jpg" alt="Yared picture picture">
+    <img src="images/profile.jpg" alt="Profile Photo">
 
     <p>
-        I am learning web development using HTML and CSS.
+        I am learning Web Development, Linux Administration,
+        Git/GitHub and High Performance Computing.
     </p>
 
     <a href="assets/Yared_cv.pdf" download class="cv-btn">
         <i class="fa-solid fa-download"></i>
         Download Resume
     </a>
-
 </section>
 
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+        <h3>BSc Computer Science</h3>
+        <p>Your University Name</p>
+        <p>2022 - Present</p>
+    </div>
+</section>
+
+<section id="tech-stack">
+    <h2>Technology Stack</h2>
+
+    <div class="tech-icons">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <i class="fab fa-git-alt"></i>
+        <i class="fab fa-linux"></i>
+        <i class="fab fa-github"></i>
+    </div>
+</section>
 
 <section id="skills">
     <h2>My Skills</h2>
@@ -95,85 +114,122 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </div>
 </section>
 
+<section id="services">
+    <h2>What I Do</h2>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Building responsive websites.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-linux"></i>
+            <h3>Linux Administration</h3>
+            <p>Linux commands and system management.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>HPC</h3>
+            <p>Learning parallel and cluster computing.</p>
+        </div>
+
+    </div>
+</section>
 
 <section id="projects">
     <h2>My Projects</h2>
 
+    <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web')">Web</button>
+        <button onclick="filterProjects('linux')">Linux</button>
+    </div>
+
     <div class="grid-container">
 
-        <div class="project-card">
-
-            <img src="images/portfolio.png" alt="Project screenshot">
+        <div class="project-card web">
+            <img src="images/portfolio.png" alt="">
             <h3>Portfolio Website</h3>
-
-            <p>
-                A personal portfolio built using HTML and CSS.
-            </p>
-            <a href="#" class="project-btn">View Project</a>
-
-            
-        </div>
-
-        <div class="project-card">
-            <img src="images/linux-notes.png" alt="Project screenshot">
-            <h3>Linux Administration Notes</h3>
-            <p>
-                A collection of Linux commands and tutorials.
-            </p>
+            <p>HTML & CSS Portfolio.</p>
             <a href="#" class="project-btn">View Project</a>
         </div>
 
-        <div class="project-card">
-            <img src="images/git-practice.png" alt="Project screenshot">
-            <h3>Git Practice Project</h3>
-            <p>
-                Learned version control using Git and GitHub.
-            </p>
+        <div class="project-card linux">
+            <img src="images/linux-notes.png" alt="">
+            <h3>Linux Notes</h3>
+            <p>Linux tutorials and commands.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card web">
+            <img src="images/git-practice.png" alt="">
+            <h3>Git Practice</h3>
+            <p>Version control learning project.</p>
             <a href="#" class="project-btn">View Project</a>
         </div>
 
     </div>
 </section>
 
+<section id="testimonials">
+    <h2>Testimonials</h2>
 
-
-
+    <div class="card">
+        <p>
+            "Yared is passionate about learning and technology."
+        </p>
+        <h4>- Mentor</h4>
+    </div>
+</section>
 
 <section id="social">
-    <h2>Contact with me</h2>
+    <h2>Connect With Me</h2>
 
     <div class="social-links">
-        <a href="https://github.com/username" target="_blank">
-            <i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/in/username" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://t.me/username" target="_blank">
-            <i class="fab fa-telegram"></i> Telegram</a>
-        <a href="mailto:yaredberhanu246@example.com" target="_blank">
-            <i class="fas fa-envelope"></i> Email</a>
-
-
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
     </div>
-    
 </section>
 
+<section id="counter">
+    <h2>Portfolio Statistics</h2>
+
+    <h3 id="visitor-count">0</h3>
+    <p>Visitors</p>
+</section>
 
 <section id="contact">
-    <h2>Contact me</h2>
-    <form id="form">
+    <h2>Contact Me</h2>
 
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" required></textarea>
+
         <button type="submit">Send Message</button>
     </form>
 </section>
 
 <footer>
     <p>
-        &copy; 2024 Yared Portfolio. All rights reserved.
+        &copy; <span id="year"></span> Yared Portfolio.
+        All Rights Reserved.
     </p>
 </footer>
+
+<button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
